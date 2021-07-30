@@ -61,11 +61,55 @@
     <main class="flex-shrink-0">
         <div class="container px-4 py-5">
             <div class="row row-cols-1 row-cols-lg-2 g-5 py-5">
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col-lg-5 border-2 border-end">
+                    <h1 class="display-6 fw-bold lh-1 mb-3">FIZZ BUZZ: A Coding Project</h1>
+                    <h4 class="lead mb-5">
+                        When it counts you Fizz Buzz. A Javascript project coding exercise using loops. Write a program that prints the numbers from 1 to 100 and for multiples of '3' display <strong>"Fizz"</strong> instead of the number, and for multiples of "5" display <strong>"Buzz"</strong>. If a multiple of both numbers display <strong>"FizzBuzz".</strong>
+                    </h4>
+                    <div class="row border-2 border-top">
+                        <h1 class="display-6 fw-bold lh-1 mt-2 mb-3">Instructions</h1>
+                        <h4 class="lead">Enter fizz and a buzz value. Press the button and the values will appear.</h4>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="row row-cols-1 row-cols-lg-2 gy-3">
+                        <div class="col">
+                            <label for="fizzValue">Enter Fizz Value.</label>
+                            <input type="number" class="form-control" id="fizzValue" aria-label="Fizz Value" value=3>
+                        </div>
+                        <div class="col">
+                            <label for="buzzValue">Enter Buzz Value.</label>
+                            <input type="number" class="form-control" id="buzzValue" aria-label="Buzz Value" value=5>
+                        </div>
+                        <div class="col-12 d-flex justify-content-start justify-content-lg-end">
+                            <button type="button" class="btn btn-dark" id="btnSubmit">Buzz It.</button>
+                        </div>
+                    </form>
+                    <div class="row row-cols-1 mt-5">
+                        <h1 class="display-6 fw-bold lh-1 border-2 border-bottom">Results</h1>
+                        <div class="col table-responsive">
+                            <table class="table table-striped table-sm">
+                                <tbody id="results" class="invisible fade show">
+                                    <!-- Results Go Here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    
+    <!-- Template for table row -->
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
@@ -95,6 +139,9 @@
 
     <!-- Custom JS -->
     <script src="/js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 
 </html>
