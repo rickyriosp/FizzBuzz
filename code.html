@@ -68,19 +68,21 @@
                 </div>
                 <div class="col-lg-4">
                     <p>The Code is structured in three functions.</p>
-                    <h5>GetValues</h5>
-                    <p><strong>getValues()</strong> accepts the user input from the page. It utilizes getElementById to pull the values from the page. Then it validates the input to make sure is valid and passes those values to the <strong>fizzBuzz()</strong> function. The function FizzBuzz returns an array of values and passes that array to the <strong>displayData()</strong> function.</p>
-                    <h5>FizzBuzz</h5>
-                    <p>The <strong>fizzBuzz()</strong> function is used to check the condition for <strong>Fizz, Buzz, or FizzBuzz.</strong> We use the <em>modulo</em> operator (%). to check if a number is divisible by the Fizz or/and Buzz values. This gives us four possible combinations.</p>
+                    <h5 class="pb-2 border-bottom border-2">getValues()</h5>
+                    <p>The <strong>getValues()</strong> function is responsible for retrieving the numbers the user provides in the input fields and parsing them as integers. If both inputs provided by the user are numbers then it will call the <strong>fizzBuzz()</strong> and <strong>displayData()</strong> functions described below.</p>
+                    <br>
+                    <h5 class="pb-2 border-bottom border-2">fizzBuzz()</h5>
+                    <p>The <strong>fizzBuzz()</strong> function takes two parameters, which are the Fizz and Buzz values. These values are used to check the conditions for <strong>Fizz, Buzz, or FizzBuzz.</strong> We use the <em>modulo</em> operator (%). to check if a number is divisible by the Fizz or/and Buzz values. This gives us four possible combinations.</p>
                     <ul>
                         <li>The number is divisible by Fizz and Buzz, which makes it <strong>FizzBuzz</strong>.</li>
                         <li>The number is divisible by <strong>Fizz</strong>.</li>
                         <li>The number is divisible by <strong>Buzz</strong>.</li>
                         <li>The number is not divisible by neither Fizz or Buzz.</li>
                     </ul>
-                    <p>This function returns an array with all the values.</p>
-                    <h5>DisplayData</h5>
-                    <p><strong>displayData()</strong> is used to inject the data into the page. It takes an array with the FizzBuzz data as parameter. This data is then divided in groups of five elements to form the rows that will be injected to the table. A template was used to facilitate the reuse and construction of the table rows.</p>
+                    <p>This function determines the data values and pushes it into an array, which is then returned.</p>
+                    <br>
+                    <h5 class="pb-2 border-bottom border-2">displayData()</h5>
+                    <p>The <strong>displayData()</strong> takes one parameter which is an array with the data. The HTML table is retrieved and emptied every time new data is parsed. A template was used to facilitate the reuse and construction of the table rows (see HTML page). The data is then divided in groups of five elements to form the rows that will be injected to the table. Custom CSS is injected into each value, this will alter the color of the text depending on the values being Fizz, Buzz, or FizzBuzz.</p>
                 </div>
             </div>
         </div>
